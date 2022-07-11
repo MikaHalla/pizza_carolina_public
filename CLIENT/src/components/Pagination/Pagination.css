@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2em 0;
+}
+.pagination button {
+  background-color: #684c2c;
+  color: white;
+  font-family: inherit;
+  border: none;
+  padding: 0.5em 0;
+  width: 9em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.pagination button:hover {
+  background-color: #795934;
+}
+.pagination button:disabled {
+  background-color: #dfcbb4;
+  cursor: not-allowed;
+}/*# sourceMappingURL=Pagination.css.map */

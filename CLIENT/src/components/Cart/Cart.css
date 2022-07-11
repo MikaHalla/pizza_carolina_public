@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+.fa-cart-shopping {
+  position: fixed;
+  bottom: 0.8em;
+  left: 0.8em;
+  height: 60px;
+  width: 60px;
+  background-color: rgb(0, 183, 255);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+.fa-cart-shopping:hover {
+  background-color: #33c5ff;
+}
+.fa-cart-shopping:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=Cart.css.map */

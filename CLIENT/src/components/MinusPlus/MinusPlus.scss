@@ -1,0 +1,28 @@
+@import '../../App.scss';
+
+svg {
+  position: absolute;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  color: $main-theme;
+  user-select: none;
+  height: 50px;
+  width: 50px;
+  fill: $main-theme;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.increase-ordered {
+    left: 0;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+  &.decrease-ordered {
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+}

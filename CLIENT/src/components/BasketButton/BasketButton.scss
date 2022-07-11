@@ -1,0 +1,47 @@
+@import '../../App.scss';
+
+.basket-click {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2.4em;
+  margin-right: 0.6em;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 2px solid $main-theme;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: $main-theme;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.pizza-item {
+  &:hover {
+    .basket-click,
+    .fa-basket-shopping {
+      color: white;
+      background-color: $main-theme;
+      transition: 0.2s ease;
+    }
+  }
+}
+
+// .basket-area {
+//   position: absolute;
+//   right: 0;
+//   top: 2.3em;
+//   margin: 1em;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   align-items: center;
+// }

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+$main-theme: hsl(32, 40%, 59%);
+$debug: 1px solid rgb(255, 6, 255);
+$main-accent: rgb(0, 183, 255);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Muli';
+  background-color: $main-theme;
+}
+
+// .container {
+//   width: 600px;
+//   margin: 0 auto;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative;
+//   background-color: $debug;
+// }

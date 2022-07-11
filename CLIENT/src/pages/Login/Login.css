@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+.login-screen {
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.login-screen form {
+  background-color: #af804b;
+  padding: 2em 0;
+  margin-top: 5em;
+}
+.login-screen form input {
+  margin: 1em;
+}
+.login-screen button {
+  text-transform: uppercase;
+  padding: 1.2em;
+  border: 0;
+  border-radius: 0.5em;
+  font-weight: bold;
+  font-family: "Muli";
+  font-size: 1.2em;
+  background-color: #684c2c;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.login-screen button:hover {
+  background-color: #795934;
+}
+.login-screen button:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=Login.css.map */

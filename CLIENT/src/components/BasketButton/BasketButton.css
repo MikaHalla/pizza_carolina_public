@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+.basket-click {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2.4em;
+  margin-right: 0.6em;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 2px solid hsl(32deg, 40%, 59%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: hsl(32deg, 40%, 59%);
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.basket-click:active {
+  transform: scale(0.9);
+}
+
+.pizza-item:hover .basket-click,
+.pizza-item:hover .fa-basket-shopping {
+  color: white;
+  background-color: hsl(32deg, 40%, 59%);
+  transition: 0.2s ease;
+}/*# sourceMappingURL=BasketButton.css.map */

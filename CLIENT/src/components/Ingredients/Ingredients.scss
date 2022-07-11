@@ -1,0 +1,28 @@
+@import '../../App.scss';
+
+.ingredients {
+  margin: 0 5em 0 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3em;
+
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ingredient {
+  background-color: lighten($main-theme, 37);
+  color: $main-theme;
+  text-align: center;
+  padding: 0.3em 0.8em 0.4em 0.8em;
+  border-radius: 0.5em;
+  font-size: 0.7em;
+  white-space: nowrap;
+
+  &.unwanted {
+    color: red;
+    background-color: lighten(red, 45);
+    text-decoration: line-through;
+  }
+}

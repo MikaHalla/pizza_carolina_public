@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+svg {
+  position: absolute;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  color: hsl(32deg, 40%, 59%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 50px;
+  width: 50px;
+  fill: hsl(32deg, 40%, 59%);
+}
+svg:hover {
+  cursor: pointer;
+}
+svg.increase-ordered {
+  left: 0;
+  top: 55%;
+  transform: translateY(-50%);
+}
+svg.decrease-ordered {
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=MinusPlus.css.map */

@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+.hero {
+  height: 100vh;
+  max-height: 1024px;
+  width: 100%;
+  background-image: url("../../assets/img/pizza-komplet.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.hero .headline {
+  position: absolute;
+  top: 50%;
+  color: white;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 1.5em;
+  border: 5px solid white;
+  border-right: none;
+  transform: translateY(-60%);
+  display: block;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.hero .headline h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+}
+.hero .headline h3 {
+  font-size: 1.7em;
+  margin-top: 0.5em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 600px) {
+  .hero .headline {
+    transform: scale(130%) translateY(-60%);
+  }
+}
+.hero button {
+  background-color: rgb(84, 190, 47);
+  color: white;
+  padding: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border: none;
+  font-family: "Open Sans";
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3em;
+}
+.hero button:hover {
+  cursor: pointer;
+  background-color: #5fce39;
+}
+.hero button:active {
+  transform: scale(0.99);
+}
+@media screen and (min-width: 600px) {
+  .hero button {
+    margin-bottom: 5em;
+  }
+}/*# sourceMappingURL=Hero.css.map */

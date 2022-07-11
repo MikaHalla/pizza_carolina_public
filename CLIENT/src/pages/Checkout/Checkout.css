@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: hsl(32deg, 40%, 59%);
+}
+
+.checkout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.checkout-list {
+  width: 100%;
+  max-width: 40em;
+  padding: 1em;
+  margin-top: 5em;
+}
+.checkout h2 {
+  margin: 5em 0;
+}
+.checkout button {
+  text-transform: uppercase;
+  padding: 1.2em;
+  border: 0;
+  border-radius: 0.5em;
+  font-weight: bold;
+  font-family: "Muli";
+  font-size: 1.2em;
+  background-color: #684c2c;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.checkout button:hover {
+  background-color: #795934;
+}
+.checkout button:active {
+  transform: scale(0.95);
+}
+
+.checkout-pizza {
+  width: 100%;
+  font-size: 0.9em;
+  border-bottom: 1px hsl(32deg, 40%, 59%) dashed;
+  background-color: white;
+  padding: 0.8em;
+  display: grid;
+  grid-template-columns: 12% 55% 10% 23%;
+  position: relative;
+}
+.checkout-pizza .remove-item {
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%);
+  padding: 0.3em 0 0.3em 0.3em;
+  cursor: pointer;
+}
+.checkout-pizza-ingredients {
+  transform: translateY(10%);
+  text-decoration: line-through;
+  grid-column: 4/2;
+}
+
+.total {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  background-color: white;
+  padding: 1.3em;
+}/*# sourceMappingURL=Checkout.css.map */
