@@ -1,5 +1,21 @@
 .pizza-list-container {
-  max-width: 600px;
+  width: 100%;
+  max-width: 512px;
   margin: 0 auto;
   background-color: white;
+}
+@media screen and (min-width: 600px) {
+  .pizza-list-container {
+    margin-bottom: 3em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pizza-list-container {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pizza-list-container {
+    margin-bottom: 3em;
+  }
 }/*# sourceMappingURL=PizzaList.css.map */

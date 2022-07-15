@@ -2,10 +2,26 @@
   background-color: rgb(80, 80, 80);
   color: #fff;
   padding: 2em;
+  height: 100%;
+}
+@media screen and (min-width: 600px) {
+  .history {
+    padding: 3em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .history {
+    padding: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .history {
+    padding: 3em;
+  }
 }
 .history h1 {
   margin-bottom: 1em;
 }
 .history p {
-  line-height: 1.4em;
+  line-height: 1.5em;
 }/*# sourceMappingURL=History.css.map */

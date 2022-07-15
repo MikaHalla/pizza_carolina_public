@@ -9,7 +9,9 @@ const Cart = () => {
     <>
       {pizzas.some((pizza) => pizza.ordered > 0) && (
         <Link to="/checkout">
-          <i className="fa-solid fa-cart-shopping"></i>
+          <div className="floating-cart">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </div>
         </Link>
       )}
     </>

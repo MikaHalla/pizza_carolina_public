@@ -4,7 +4,7 @@ import './History.css';
 const History = () => {
   return (
     <section className="history">
-      <h1>Niečo o nás</h1>
+      <h1>Pár slov o nás</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
         expedita corrupti velit, aspernatur totam obcaecati in

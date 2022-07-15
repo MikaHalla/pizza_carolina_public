@@ -2,12 +2,25 @@
   background-color: rgb(80, 80, 80);
   color: #fff;
   padding: 2em;
+  height: 100%;
+
+  @media screen and (min-width: 600px) {
+    padding: 3em;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 2em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 3em;
+  }
 
   h1 {
     margin-bottom: 1em;
   }
 
   p {
-    line-height: 1.4em;
+    line-height: 1.5em;
   }
 }

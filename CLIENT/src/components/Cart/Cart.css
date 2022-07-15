@@ -13,10 +13,10 @@ html {
 
 body {
   font-family: "Muli";
-  background-color: hsl(32deg, 40%, 59%);
+  background-color: #c8a67e;
 }
 
-.fa-cart-shopping {
+.floating-cart {
   position: fixed;
   bottom: 0.8em;
   left: 0.8em;
@@ -33,9 +33,9 @@ body {
   font-size: 1.6em;
   cursor: pointer;
 }
-.fa-cart-shopping:hover {
+.floating-cart:hover {
   background-color: #33c5ff;
 }
-.fa-cart-shopping:active {
+.floating-cart:active {
   transform: scale(0.95);
 }/*# sourceMappingURL=Cart.css.map */

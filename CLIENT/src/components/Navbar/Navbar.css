@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: "Muli";
-  background-color: hsl(32deg, 40%, 59%);
+  background-color: #c8a67e;
 }
 
 nav {
@@ -64,6 +64,11 @@ nav img {
 nav .fa-bars {
   font-size: 1.6em;
   margin-left: 0.8em;
+}
+@media screen and (min-width: 768px) {
+  nav .fa-bars {
+    display: none;
+  }
 }
 nav .fa-bars:hover {
   cursor: pointer;

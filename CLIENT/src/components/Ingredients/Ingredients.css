@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: "Muli";
-  background-color: hsl(32deg, 40%, 59%);
+  background-color: #c8a67e;
 }
 
 .ingredients {
@@ -23,6 +23,16 @@ body {
   gap: 0.3em;
 }
 @media screen and (min-width: 600px) {
+  .ingredients {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .ingredients {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
   .ingredients {
     grid-template-columns: repeat(4, 1fr);
   }

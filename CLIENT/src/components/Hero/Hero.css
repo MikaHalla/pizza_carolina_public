@@ -14,12 +14,12 @@ html {
 
 body {
   font-family: "Muli";
-  background-color: hsl(32deg, 40%, 59%);
+  background-color: #c8a67e;
 }
 
 .hero {
   height: 100vh;
-  max-height: 1024px;
+  max-height: 1080px;
   width: 100%;
   background-image: url("../../assets/img/pizza-komplet.jpg");
   background-size: cover;

@@ -1,12 +1,14 @@
-import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import PizzaContext from '../../context/PizzaContext';
+import UserContext from '../../context/UserContext';
 import './Checkout.css';
 
 const Checkout = () => {
   const { pizzas, cleanBasket, removeOneItemFromBasket } =
     useContext(PizzaContext);
+  const { activeUser } = useContext(UserContext);
+
   return (
     <section className="checkout">
       {pizzas.some((pizza) => pizza.ordered > 0) ? (
@@ -55,8 +57,10 @@ const Checkout = () => {
               </h3>
             </div>
           </div>
-          <Link to="/thankyou">
-            <button onClick={cleanBasket}>Objednať</button>
+          <Link to={activeUser.isLoggedIn ? '/thankyou' : '/login'}>
+            <button onClick={activeUser.isLoggedIn && cleanBasket}>
+              Objednať
+            </button>
           </Link>
         </>
       ) : (

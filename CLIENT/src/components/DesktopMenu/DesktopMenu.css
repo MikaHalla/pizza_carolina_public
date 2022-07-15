@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli";
+  background-color: #c8a67e;
+}
+
+.desktop-menu {
+  display: none;
+}
+.desktop-menu h4 {
+  padding: 0.5em 1em;
+  background-color: white;
+  color: black;
+  border-radius: 0.2em;
+  position: relative;
+}
+.desktop-menu h4:hover {
+  background-color: rgb(0, 183, 255);
+  color: white;
+}
+.desktop-menu h4 .cart-item-count {
+  height: 1.7em;
+  width: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+.desktop-menu a {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+    gap: 1em;
+  }
+}/*# sourceMappingURL=DesktopMenu.css.map */

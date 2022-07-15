@@ -1,0 +1,14 @@
+@media screen and (min-width: 768px) {
+  .pizza-list-and-history {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .pizza-list-and-history-left {
+    width: 50%;
+  }
+  .pizza-list-and-history-right {
+    width: 50%;
+  }
+}/*# sourceMappingURL=Home.css.map */

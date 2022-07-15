@@ -1,0 +1,42 @@
+@import '../../App.scss';
+
+.desktop-menu {
+  display: none;
+
+  h4 {
+    padding: 0.5em 1em;
+    background-color: white;
+    color: black;
+    border-radius: 0.2em;
+    position: relative;
+
+    &:hover {
+      background-color: $main-accent;
+      color: white;
+    }
+
+    .cart-item-count {
+      height: 1.7em;
+      width: 1.7em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+      background-color: red;
+      color: white;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 1em;
+  }
+}

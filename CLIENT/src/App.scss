@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: 'Muli';
-  background-color: $main-theme;
+  background-color: lighten($main-theme, 5);
 }
 
 // .container {

@@ -1,5 +1,4 @@
 import { createContext, useState } from 'react';
-// import ProtectedRoutes from '../utils/ProtectedRoutes';
 
 const UserContext = createContext({});
 
@@ -67,7 +66,6 @@ export const UserProvider = ({ children }) => {
       }}
     >
       {children}
-      {/* <ProtectedRoutes /> */}
     </UserContext.Provider>
   );
 };

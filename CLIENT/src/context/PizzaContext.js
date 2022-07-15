@@ -5,6 +5,7 @@ const PizzaContext = createContext();
 export const PizzaProvider = ({ children }) => {
   const [pizzas, setPizzas] = useState([]);
   const [filteredPizzas, setFilteredPizzas] = useState([]);
+  const [amountInBasket, setAmountInBasket] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [searchText, setSearchText] = useState('');
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -19,6 +20,7 @@ export const PizzaProvider = ({ children }) => {
       : activePizza.ordered++;
     newPizzas[id - 1] = activePizza;
     setPizzas([...newPizzas]);
+    localStorage.setItem('pizzas', pizzas);
   };
 
   const removePizzaFromBasket = (id) => {
@@ -31,15 +33,6 @@ export const PizzaProvider = ({ children }) => {
     setPizzas([...newPizzas]);
   };
 
-  const cleanBasket = () => {
-    const newPizzas = pizzas;
-    newPizzas.forEach((pizza) => {
-      pizza.ordered = 0;
-      pizza.ingredients.forEach((ingr) => (ingr.isUnwanted = false));
-    });
-    setPizzas(newPizzas);
-  };
-
   const removeOneItemFromBasket = (id) => {
     const newPizzas = pizzas;
     const activePizza = pizzas[id - 1];
@@ -50,6 +43,18 @@ export const PizzaProvider = ({ children }) => {
     newPizzas[id - 1] = activePizza;
     setPizzas([...newPizzas]);
   };
+
+  const cleanBasket = () => fetchPizzas();
+  // {
+  //   const newPizzas = pizzas;
+  //   newPizzas.forEach((pizza) => {
+  //     pizza.ordered = 0;
+  //     pizza.ingredients.forEach((ingr) => (ingr.isUnwanted = false));
+  //   });
+  //   setPizzas(newPizzas);
+  //   setAmountInBasket(0);
+
+  // };
 
   const addToFavorites = (id) => {
     const newPizzas = pizzas;
@@ -81,18 +86,28 @@ export const PizzaProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    const fetchPizzas = async () => {
-      const res = await fetch(
-        // 'https://arcane-thicket-55711.herokuapp.com/api/pizza'
-        'http://192.168.100.150:5000/api/pizza'
-      );
-      const data = await res.json();
+    setAmountInBasket(
+      pizzas
+        .filter((pizza) => pizza.ordered > 0)
+        .reduce((curr, add) => curr + add.ordered, 0)
+    );
+  }, [pizzas]);
 
-      setPizzas(data);
-      setFilteredPizzas(data);
-      setIsLoading(false);
-    };
+  const fetchPizzas = async () => {
+    const res = await fetch(
+      // 'https://arcane-thicket-55711.herokuapp.com/api/pizza'
+      'http://192.168.100.150:5000/api/pizza'
+    );
+    const data = await res.json();
+
+    setPizzas(data);
+    setFilteredPizzas(data);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
     fetchPizzas();
+    localStorage.getItem('pizzas');
   }, []);
 
   useEffect(() => {
@@ -124,7 +139,7 @@ export const PizzaProvider = ({ children }) => {
       )
     );
     setCurrentPage(1);
-  }, [searchText, pizzas]);
+  }, [searchText]);
 
   return (
     <PizzaContext.Provider
@@ -142,6 +157,7 @@ export const PizzaProvider = ({ children }) => {
         removePizzaFromBasket,
         removeOneItemFromBasket,
         cleanBasket,
+        amountInBasket,
 
         addToFavorites,
         addToUnwanted,

@@ -1,7 +1,7 @@
-import React from 'react';
 import './Navbar.css';
 import logo from '../../assets/img/logo_Carolina.jpg';
 import MobileMenu from '../MobileMenu/MobileMenu';
+import DesktopMenu from '../DesktopMenu/DesktopMenu';
 import PizzaContext from '../../context/PizzaContext';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -30,15 +30,19 @@ const Navbar = () => {
             </div>
           </div>
           <div className="nav-right">
+            {/* hamburger*/}
             {!mobileMenu && (
               <i
                 className="fas fa-solid fa-bars"
                 onClick={() => toggleMobileMenu()}
               ></i>
             )}
+            {/* desktop menu */}
+            <DesktopMenu />
           </div>
         </div>
       </nav>
+      {/* mobile menu */}
       <MobileMenu />
     </>
   );
