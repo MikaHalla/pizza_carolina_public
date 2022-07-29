@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 import './Cart.css';
 
 const Cart = () => {
-  const { pizzas } = useContext(PizzaContext);
+  const { state } = useContext(MainContext);
   return (
     <>
-      {pizzas.some((pizza) => pizza.ordered > 0) && (
+      {state.shoppingCart.some((item) => item.ordered > 0) && (
         <Link to="/checkout">
           <div className="floating-cart">
             <i className="fa-solid fa-cart-shopping"></i>

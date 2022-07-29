@@ -1,12 +1,11 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import PizzaContext from '../../context/PizzaContext';
-import UserContext from '../../context/UserContext';
+import { LOGOUT_USER } from '../../constants/constants';
+import MainContext from '../../context/MainContext';
 import './DesktopMenu.css';
 
 const DesktopMenu = () => {
-  const { amountInBasket } = useContext(PizzaContext);
-  const { logOut, activeUser } = useContext(UserContext);
+  const { state, dispatch, amountInBasket } = useContext(MainContext);
   return (
     <section className="desktop-menu">
       {amountInBasket > 0 && (
@@ -17,20 +16,21 @@ const DesktopMenu = () => {
           </h4>
         </Link>
       )}
-      {activeUser.isLoggedIn && (
-        <Link to={`/user/${activeUser.id}`}>
+      {state.activeUser.isLoggedIn && (
+        <Link to={`/user/${state.activeUser.id}`}>
           <h4>
-            <i className="fa-solid fa-user"></i> {activeUser.name}
+            <i className="fa-solid fa-user"></i>{' '}
+            {state.activeUser.name}
           </h4>
         </Link>
       )}
-      {!activeUser.isLoggedIn && (
+      {!state.activeUser.isLoggedIn && (
         <Link to="/login">
           <h4>Prihlásiť</h4>
         </Link>
       )}
-      {activeUser.isLoggedIn && (
-        <Link to="/" onClick={() => logOut()}>
+      {state.activeUser.isLoggedIn && (
+        <Link to="/" onClick={() => dispatch({ type: LOGOUT_USER })}>
           <h4>
             <i className="fa-solid fa-right-from-bracket"></i>{' '}
             Odhlásiť

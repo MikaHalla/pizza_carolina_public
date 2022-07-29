@@ -1,11 +1,11 @@
 import React from 'react';
 import './MinusPlus.css';
 import { useContext } from 'react';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 
 const MinusPlus = ({ id }) => {
   const { addPizzaToBasket, removePizzaFromBasket } =
-    useContext(PizzaContext);
+    useContext(MainContext);
 
   return (
     <div className="plus-minus">

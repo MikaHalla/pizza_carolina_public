@@ -1,12 +1,12 @@
 import React from 'react';
 import './PizzaList.css';
 import { useContext } from 'react';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 import PizzaItem from '../PizzaItem/PizzaItem';
 import Pagination from '../Pagination/Pagination';
 
 const PizzaList = () => {
-  const { pages, displayOnlyThesePizzas } = useContext(PizzaContext);
+  const { state, displayOnlyThesePizzas } = useContext(MainContext);
   return (
     <div className="pizza-list-container">
       <ul>
@@ -14,7 +14,7 @@ const PizzaList = () => {
           <PizzaItem key={pizza.id} pizza={pizza} />
         ))}
       </ul>
-      {pages > 1 && <Pagination />}
+      {state.pages > 1 && <Pagination />}
     </div>
   );
 };

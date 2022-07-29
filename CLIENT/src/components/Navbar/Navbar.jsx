@@ -2,12 +2,13 @@ import './Navbar.css';
 import logo from '../../assets/img/logo_Carolina.jpg';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import DesktopMenu from '../DesktopMenu/DesktopMenu';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { TOGGLE_MOBILE_MENU } from '../../constants/constants';
 
 const Navbar = () => {
-  const { mobileMenu, toggleMobileMenu } = useContext(PizzaContext);
+  const { state, dispatch } = useContext(MainContext);
   return (
     <>
       <nav>
@@ -31,10 +32,10 @@ const Navbar = () => {
           </div>
           <div className="nav-right">
             {/* hamburger*/}
-            {!mobileMenu && (
+            {!state.mobileMenu && (
               <i
                 className="fas fa-solid fa-bars"
-                onClick={() => toggleMobileMenu()}
+                onClick={() => dispatch({ type: TOGGLE_MOBILE_MENU })}
               ></i>
             )}
             {/* desktop menu */}

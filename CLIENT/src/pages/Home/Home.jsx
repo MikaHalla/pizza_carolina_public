@@ -3,14 +3,14 @@ import Search from '../../components/Search/Search';
 import Spinner from '../../components/Spinner/Spinner';
 import Hero from '../../components/Hero/Hero';
 import Cart from '../../components/Cart/Cart';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 import { useContext } from 'react';
 import History from '../../components/History/History';
 import Footer from '../../components/Footer/Footer';
 import './Home.css';
 
 const Home = () => {
-  const { isLoading } = useContext(PizzaContext);
+  const { isLoading } = useContext(MainContext);
 
   return (
     <>

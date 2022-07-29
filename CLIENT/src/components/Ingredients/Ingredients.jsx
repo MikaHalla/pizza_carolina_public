@@ -1,10 +1,10 @@
 import React from 'react';
 import './Ingredients.css';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 import { useContext } from 'react';
 
 const Ingredients = ({ id, ingredients }) => {
-  const { addToUnwanted } = useContext(PizzaContext);
+  const { addToUnwanted } = useContext(MainContext);
 
   return (
     <div className="ingredients">

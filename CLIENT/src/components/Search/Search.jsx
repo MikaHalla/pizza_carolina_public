@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import './Search.css';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
+import { CHANGE_SEARCH_TEXT } from '../../constants/constants';
 
 const Search = () => {
-  const { searchText, setSearchText } = useContext(PizzaContext);
+  const { state, dispatch } = useContext(MainContext);
 
   return (
     <section id="search">
@@ -16,9 +17,14 @@ const Search = () => {
       </p>
       <input
         type="text"
-        value={searchText}
+        value={state.searchText}
         placeholder="Hľadaný výraz..."
-        onChange={(e) => setSearchText(e.target.value)}
+        onChange={(e) =>
+          dispatch({
+            type: CHANGE_SEARCH_TEXT,
+            payload: e.target.value,
+          })
+        }
       ></input>
     </section>
   );

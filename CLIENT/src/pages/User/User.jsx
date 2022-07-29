@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import UserContext from '../../context/UserContext';
+import MainContext from '../../context/MainContext';
 
 const User = () => {
-  const { activeUser } = useContext(UserContext);
+  const { state } = useContext(MainContext);
   return (
     <section
       style={{
@@ -15,8 +15,8 @@ const User = () => {
         justifyContent: 'space-evenly',
       }}
     >
-      {activeUser.isLoggedIn ? (
-        <h1>{`username:  ${activeUser.name}`}</h1>
+      {state.activeUser.isLoggedIn ? (
+        <h1>{`username:  ${state.activeUser.name}`}</h1>
       ) : (
         ''
       )}

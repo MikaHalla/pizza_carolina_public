@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import PizzaContext from '../../context/PizzaContext';
+import MainContext from '../../context/MainContext';
 import BasketButton from '../BasketButton/BasketButton';
 import Ingredients from '../Ingredients/Ingredients';
 import MinusPlus from '../MinusPlus/MinusPlus';
@@ -18,7 +18,7 @@ const PizzaItem = ({
     isFavorite,
   },
 }) => {
-  const { addToFavorites } = useContext(PizzaContext);
+  const { addToFavorites } = useContext(MainContext);
 
   return (
     <section

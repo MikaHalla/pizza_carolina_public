@@ -1,17 +1,11 @@
 import { useContext, useId } from 'react';
 import { Link } from 'react-router-dom';
-import UserContext from '../../context/UserContext';
+import MainContext from '../../context/MainContext';
 import './Login.css';
 
 const Login = () => {
-  const {
-    name,
-    setName,
-    password,
-    setPassword,
-    loginUser,
-    activeUser,
-  } = useContext(UserContext);
+  const { state, name, setName, password, setPassword, loginUser } =
+    useContext(MainContext);
 
   const id = useId();
 
@@ -38,7 +32,7 @@ const Login = () => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Link to={`/user/${activeUser.id}`}>
+        <Link to={`/user/${state.activeUser.id}`}>
           <button onClick={(e) => loginUser(e)}>Prihlásiť</button>
         </Link>
       </form>

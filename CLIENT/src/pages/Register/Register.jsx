@@ -1,11 +1,11 @@
 import { useContext, useId } from 'react';
 import { Link } from 'react-router-dom';
-import UserContext from '../../context/UserContext';
+import MainContext from '../../context/MainContext';
 import '../Login/Login.css';
 
 const Register = () => {
   const { name, setName, password, setPassword, registerUser } =
-    useContext(UserContext);
+    useContext(MainContext);
 
   const id = useId();
 

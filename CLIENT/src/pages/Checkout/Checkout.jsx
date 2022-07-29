@@ -1,13 +1,11 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import PizzaContext from '../../context/PizzaContext';
-import UserContext from '../../context/UserContext';
+import MainContext from '../../context/MainContext';
 import './Checkout.css';
 
 const Checkout = () => {
-  const { pizzas, cleanBasket, removeOneItemFromBasket, sendOrder } =
-    useContext(PizzaContext);
-  const { activeUser } = useContext(UserContext);
+  const { state, pizzas, removeOneItemFromBasket, sendOrder } =
+    useContext(MainContext);
 
   return (
     <section className="checkout">
@@ -57,10 +55,13 @@ const Checkout = () => {
               </h3>
             </div>
           </div>
-          <Link to={activeUser.isLoggedIn ? '/thankyou' : '/login'}>
+          <Link
+            to={state.activeUser.isLoggedIn ? '/thankyou' : '/login'}
+          >
             <button
               onClick={
-                activeUser.isLoggedIn && /*cleanBasket*/ sendOrder
+                state.activeUser.isLoggedIn &&
+                /*cleanBasket*/ sendOrder
               }
             >
               Objednať

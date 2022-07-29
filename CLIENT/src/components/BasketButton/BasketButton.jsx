@@ -1,14 +1,17 @@
 import React from 'react';
 import { useContext } from 'react';
-import PizzaContext from '../../context/PizzaContext';
+import { ADD_PIZZA_TO_CART } from '../../constants/constants';
+import MainContext from '../../context/MainContext';
 import './BasketButton.css';
 
 const BasketButton = ({ id, ordered }) => {
-  const { addPizzaToBasket } = useContext(PizzaContext);
+  const { dispatch } = useContext(MainContext);
   return (
     <button
       className="basket-click"
-      onClick={() => addPizzaToBasket(id)}
+      onClick={() =>
+        dispatch({ type: ADD_PIZZA_TO_CART, payload: id })
+      }
     >
       {ordered > 0 ? (
         `${ordered}x`

@@ -1,0 +1,20 @@
+export const PIZZAS_PER_PAGE = 9;
+
+export const TOGGLE_LOADING = 'TOGGLE_LOADING';
+export const TOGGLE_MOBILE_MENU = 'TOGGLE_MOBILE_MENU';
+
+export const CHANGE_SEARCH_TEXT = 'CHANGE_SEARCH_TEXT';
+
+export const PAGES = 'PAGES';
+export const CURRENT_PAGE = 'CURRENT_PAGE';
+export const NEXT_PAGE = 'NEXT_PAGE';
+export const PREVIOUS_PAGE = 'PREVIOUS_PAGE';
+
+export const LOGIN_USER = 'LOGIN_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';
+
+export const FETCH_PIZZAS = 'FETCH_PIZZAS';
+export const TOGGLE_FAVORITE_PIZZA = 'TOGGLE_FAVORITE_PIZZA';
+
+export const ADD_PIZZA_TO_CART = 'ADD_PIZZA_TO_CART';
+export const REMOVE_PIZZA_FROM_CART = 'REMOVE_PIZZA_FROM_CART';
