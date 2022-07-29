@@ -20,7 +20,7 @@ export const PizzaProvider = ({ children }) => {
       : activePizza.ordered++;
     newPizzas[id - 1] = activePizza;
     setPizzas([...newPizzas]);
-    localStorage.setItem('pizzas', pizzas);
+    // localStorage.setItem('pizzas', pizzas);
   };
 
   const removePizzaFromBasket = (id) => {
@@ -42,6 +42,15 @@ export const PizzaProvider = ({ children }) => {
     );
     newPizzas[id - 1] = activePizza;
     setPizzas([...newPizzas]);
+  };
+
+  const sendOrder = () => {
+    const newOrder = {
+      // userId: activeUser,
+      pizzas: [...pizzas],
+    };
+    console.log(newOrder);
+    cleanBasket();
   };
 
   const cleanBasket = () => fetchPizzas();
@@ -168,6 +177,8 @@ export const PizzaProvider = ({ children }) => {
 
         mobileMenu,
         toggleMobileMenu,
+
+        sendOrder,
       }}
     >
       {children}

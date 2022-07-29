@@ -5,7 +5,7 @@ import UserContext from '../../context/UserContext';
 import './Checkout.css';
 
 const Checkout = () => {
-  const { pizzas, cleanBasket, removeOneItemFromBasket } =
+  const { pizzas, cleanBasket, removeOneItemFromBasket, sendOrder } =
     useContext(PizzaContext);
   const { activeUser } = useContext(UserContext);
 
@@ -58,7 +58,11 @@ const Checkout = () => {
             </div>
           </div>
           <Link to={activeUser.isLoggedIn ? '/thankyou' : '/login'}>
-            <button onClick={activeUser.isLoggedIn && cleanBasket}>
+            <button
+              onClick={
+                activeUser.isLoggedIn && /*cleanBasket*/ sendOrder
+              }
+            >
               Objednať
             </button>
           </Link>
